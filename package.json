@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "author": "Oskar Kobierecki",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^4.29.0"
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
   },
   "dependencies": {}
 }
