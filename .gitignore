@@ -60,3 +60,6 @@ typings/
 
 #Webstorm
 .idea
+
+# DS Store
+.DS_Store
