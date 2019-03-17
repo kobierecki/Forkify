@@ -1,4 +1,5 @@
 import Search from './models/Search';
+import Recipe from './models/Recipe';
 import * as searchView from  './views/searchView';
 import {elements, renderLoader, clearLoader} from "./views/base";
 
@@ -9,6 +10,8 @@ import {elements, renderLoader, clearLoader} from "./views/base";
 // Liked recipes
 
 const state = {};
+
+// SEARCH CONTROLLER
 
 const controlSearch = async () => {
     // GET QUERY FROM VIEW
@@ -21,11 +24,17 @@ const controlSearch = async () => {
         searchView.clearInput();
         searchView.clearResults();
         renderLoader(elements.searchResults);
-        // SEARCH FOR RECIPES
-        await state.search.getResults();
-        // RENDER RESULTS ON THE UI
-        clearLoader();
-        searchView.renderResults(state.search.result);
+
+        try {
+            // SEARCH FOR RECIPES
+            await state.search.getResults();
+            // RENDER RESULTS ON THE UI
+            clearLoader();
+            searchView.renderResults(state.search.result);
+        } catch (error) {
+            alert ('Search processing went wrong!');
+            clearLoader();
+        }
     }
 };
 
@@ -43,3 +52,33 @@ elements.searchResultsPages.addEventListener('click', e => {
         console.log(goToPage);
     }
 });
+
+// RECIPE CONTROLLER
+
+const controlRecipe = async () => {
+    // GET ID
+    const id = window.location.hash.replace('#', '');
+    console.log(id);
+    if (id){
+        // PREPARE UI FOR CHANGES
+        // CREATE NEW RECIPE OBJECT
+        state.recipe = new Recipe(id);
+        
+        try {
+            // GET RECIPE DATA
+            await state.recipe.getRecipe();
+            // CALC SERVINGS AND TIME
+            state.recipe.calcServings();
+            state.recipe.calcTime();
+            // RENDER RECIPE
+            console.log(state.recipe);   
+        } catch (error) {
+            alert('Error processing recipe!');
+        }
+    }
+};
+
+// window.addEventListener('hashchange', controlRecipe);
+// window.addEventListener('load', controlRecipe);
+
+['hashchange', 'load'].forEach(event => window.addEventListener(event, controlRecipe));
