@@ -71,6 +71,10 @@ const controlRecipe = async () => {
         // PREPARE UI FOR CHANGES
         recipeView.clearRecipe();
         renderLoader(elements.recipe);
+
+        //HIGHLIGHT SELECTED SEARCH ITEM
+        if(state.search) searchView.highlightSelected(id);
+
         // CREATE NEW RECIPE OBJECT
         state.recipe = new Recipe(id);
 
@@ -98,3 +102,9 @@ const controlRecipe = async () => {
 // window.addEventListener('load', controlRecipe);
 
 ['hashchange', 'load'].forEach(event => window.addEventListener(event, controlRecipe));
+
+// HANDLING RECIPE BUTTON CLICKS
+
+elements.recipe.addEventListener('click', e => {
+   if(e.target.matches('.btn'))
+});
