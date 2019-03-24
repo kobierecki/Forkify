@@ -9,7 +9,7 @@ const formatCount = count => {
   if(count) {
     // count = 2.5 --> 2 1/2
       const [int, dec] = count.toString().split('.').map(el => parseInt(el, 10));
-
+        console.log('started');
       if(!dec) return count;
 
       if(int === 0) {
@@ -111,9 +111,9 @@ export const renderRecipe = recipe => {
 
 export const updateServingsIngredients = recipe => {
   // UPDATE COUNT
-    document.querySelector('.recipe__info-data__people').textContent = recipe.servings;
+    document.querySelector('.recipe__info-data--people').textContent = recipe.servings;
   // UPDATE INGREDIENTS
-    const countElements = Array.from(document.querySelector('.recipe__count'));
+    const countElements = Array.from(document.querySelectorAll('.recipe__count'));
     countElements.forEach((el,i) => {
       el.textContent = formatCount(recipe.ingredients[i].count);
     });
