@@ -1,5 +1,6 @@
 import Search from './models/Search';
 import Recipe from './models/Recipe';
+import List from './models/List';
 import * as searchView from  './views/searchView';
 import * as recipeView from  './views/recipeView';
 import {elements, renderLoader, clearLoader} from "./views/base";
@@ -57,7 +58,6 @@ elements.searchResultsPages.addEventListener('click', e => {
         const goToPage = parseInt(btn.dataset.goto, 10);
         searchView.clearResults();
         searchView.renderResults(state.search.result, goToPage);
-        console.log(goToPage);
     }
 });
 
@@ -66,7 +66,6 @@ elements.searchResultsPages.addEventListener('click', e => {
 const controlRecipe = async () => {
     // GET ID
     const id = window.location.hash.replace('#', '');
-    console.log(id);
     if (id){
         // PREPARE UI FOR CHANGES
         recipeView.clearRecipe();
@@ -116,3 +115,6 @@ elements.recipe.addEventListener('click', e => {
        recipeView.updateServingsIngredients(state.recipe);
    }
 });
+
+const l = new List();
+window.l = l;

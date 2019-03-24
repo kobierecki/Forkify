@@ -9,7 +9,6 @@ const formatCount = count => {
   if(count) {
     // count = 2.5 --> 2 1/2
       const [int, dec] = count.toString().split('.').map(el => parseInt(el, 10));
-        console.log('started');
       if(!dec) return count;
 
       if(int === 0) {
