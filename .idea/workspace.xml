@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f023cb5a-f9f1-4955-82be-1992fdc46683" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/views/likesView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/views/likesView.js" afterDir="false" />
-    </list>
+    <list default="true" id="f023cb5a-f9f1-4955-82be-1992fdc46683" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -80,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/views/likesView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+            <state relative-caret-position="408">
+              <caret line="34" column="2" lean-forward="true" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -365,12 +361,12 @@
       <workItem from="1553540005038" duration="2402000" />
       <workItem from="1553543496822" duration="777000" />
       <workItem from="1553639547335" duration="6314000" />
-      <workItem from="1553675145221" duration="1976000" />
+      <workItem from="1553675145221" duration="2764000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171289000" />
+    <option name="totallyTimeSpent" value="172077000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -623,8 +619,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/views/likesView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+        <state relative-caret-position="408">
+          <caret line="34" column="2" lean-forward="true" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
