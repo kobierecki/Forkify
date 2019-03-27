@@ -140,8 +140,6 @@ const controlList = () => {
 
 // LIKE CONTROLLER
 
-state.likes = new Likes();
-likesView.toggleLikesMenu(state.likes.getNumLikes())
 const controlLike = () => {
     if (!state.likes) state.likes = new Likes();
     const currentID = state.recipe.id;
@@ -170,6 +168,15 @@ const controlLike = () => {
     }
     likesView.toggleLikesMenu(state.likes.getNumLikes());
 };
+
+// RESTORE LIKE RECIPES ON PAGE LOAD
+
+window.addEventListener('load', () => {
+    state.likes = new Likes();
+    state.likes.readStorage();
+    likesView.toggleLikesMenu(state.likes.getNumLikes());
+    state.likes.likes.forEach(like => likesView.renderLike(like));
+});
 
 // HANDLING RECIPE BUTTON CLICKS
 
